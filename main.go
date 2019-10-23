@@ -16,11 +16,11 @@ func main() {
 
 	viper.SetDefault("slackApiToken", "")
 	viper.SetDefault("slackUserName", "")
-	viper.SetDefault("slackChannel", "CFCAZ895F")
+	viper.SetDefault("slackChannel", "")
 
 	err := viper.ReadInConfig()
 	if err != nil {
-		log.Println("Fatal error config file: %s \n", err)
+		log.Println(err)
 	}
 
 	subcmd := os.Args[1]
